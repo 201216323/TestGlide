@@ -38,6 +38,7 @@ public class GlideRecyclerviewAdapter extends RecyclerView.Adapter<GlideRecycler
             "http://ws-ugc.fithub.cc/app/2199695/dynamic/7432/e192b9612a5d4f508255c149771f4e10.jpg"
     };
 
+
     public GlideRecyclerviewAdapter(Context context) {
         mContext = context;
     }
