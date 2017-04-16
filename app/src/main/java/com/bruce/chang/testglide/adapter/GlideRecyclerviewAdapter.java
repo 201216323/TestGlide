@@ -20,7 +20,6 @@ public class GlideRecyclerviewAdapter extends RecyclerView.Adapter<GlideRecycler
 
     String[] mDatas = new String[]{
             "http://p2.so.qhmsg.com/bdr/_240_/t01ffcdaedde9bcb74c.jpg",
-            "http://http://pic1.desk.chinaz.com/file/201201/4/jxipbz8_p.jpg",
             "http://img.article.pchome.net/00/56/35/09/pic_lib/wm/fengjing1.jpg",
             "http://p1.so.qhmsg.com/bdr/_240_/t0189a38410d9b1a6db.jpg",
             "http://p3.so.qhmsg.com/bdr/_240_/t0118233347354d0838.jpg",
@@ -55,7 +54,7 @@ public class GlideRecyclerviewAdapter extends RecyclerView.Adapter<GlideRecycler
 
         // 显示数据
         int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, mContext.getResources().getDisplayMetrics());
-        int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, mContext.getResources().getDisplayMetrics());
+        int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300, mContext.getResources().getDisplayMetrics());
 
         Glide.with(mContext)
                 .load(mDatas[position])

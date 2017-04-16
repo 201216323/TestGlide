@@ -65,7 +65,8 @@ public class GlideBaseActivity extends AppCompatActivity {
         tvGlide6.setText("6加载本地gif");
         String gifPath = Environment.getExternalStorageDirectory() + "/aobana.gif";
         File gifFile = new File(gifPath);
-        Glide.with(this).load(gifFile).placeholder(R.mipmap.ic_launcher).into(ivGlide6);
+        Glide.with(this).load(gifFile)
+                .placeholder(R.mipmap.ic_launcher).error(R.mipmap.fbb).into(ivGlide6);
         //（7）加载本地小视频和快照
         tvGlide7.setText("7加载本地小视频和快照");
         String videoPath = Environment.getExternalStorageDirectory() + "/1.mp4";
@@ -73,12 +74,22 @@ public class GlideBaseActivity extends AppCompatActivity {
         Glide.with(this).load(Uri.fromFile(videoFile)).placeholder(R.mipmap.ic_launcher).into(ivGlide7);
         //（8）设置缩略图比例,然后，先加载缩略图，再加载原图
         tvGlide8.setText("8设置缩略图比例,然后，先加载缩略图，再加载原图");
-        String urlPath = "/storage/emulated/0/swj.jpg";
-        Glide.with(this).load(new File(urlPath)).thumbnail(0.1f).centerCrop().placeholder(R.mipmap.ic_launcher).into(ivGlide8);
+        String urlPath = "/storage/emulated/0/j.jpg";
+        Glide.with(this)
+                .load(urlPath)
+                .thumbnail(0.1f)
+                .centerCrop()
+                .placeholder(R.mipmap.ic_launcher)
+                .into(ivGlide8);
         //（9）先建立一个缩略图对象，然后，先加载缩略图，再加载原图
         tvGlide9.setText("9先建立一个缩略图对象，然后，先加载缩略图，再加载原图");
         DrawableRequestBuilder thumbnailRequest = Glide.with(this).load(new File(urlPath));
-        Glide.with(this).load(Uri.fromFile(videoFile)).thumbnail(thumbnailRequest).centerCrop().placeholder(R.mipmap.ic_launcher).into(ivGlide9);
+        Glide.with(this)
+                .load(Uri.fromFile(videoFile))
+                .thumbnail(thumbnailRequest)
+                .centerCrop()
+                .placeholder(R.mipmap.ic_launcher)
+                .into(ivGlide9);
 
     }
 
